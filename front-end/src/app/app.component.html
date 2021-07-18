@@ -1,0 +1,37 @@
+<div class="searchBar">
+  <input type="text" [value]="searchFirst" (input)="searchFirst = $event.target.value" placeholder="Search Name"
+    class="searchBox" />
+  <div (click)="toggleAdvanced()" class="toggle" [ngClass]="advancedSearch ? 'selected':''">Advanced Search</div>
+</div>
+<div class="hiddenSearch" *ngIf="advancedSearch">
+  <input type="text" [value]="searchPhone" (input)="searchPhone = $event.target.value" placeholder="Search Phone"
+    class="searchBox" />
+  <input type="number" [value]="searchAge" (input)="searchAge = $event.target.value" placeholder="Search Age"
+    class="searchBox" />
+  <input type="text" [value]="searchState" (input)="searchState = $event.target.value" placeholder="Search State"
+    class="searchBox" />
+  <input type="text" [value]="searchCountry" (input)="searchCountry = $event.target.value" placeholder="Search Country"
+    class="searchBox" />
+</div>
+
+
+<div class="resultContainer">
+  <div
+    *ngFor="let user of results | searchFilter:searchFirst |searchFilterLast:searchPhone|searchAge:searchAge|searchState:searchState|searchCountry:searchCountry"
+    class="result">
+    <p class="name" (click)="toggleInfo(user.login.uuid)">
+      {{user.name.first}} {{user.name.last}}
+    </p>
+
+    <img src={{user.picture.medium}} id="{{user.login.uuid}}imageM" (click)="toggleInfo(user.login.uuid)">
+    <img src={{user.picture.large}} class="hidden" id="{{user.login.uuid}}imageL" (click)="toggleInfo(user.login.uuid)">
+
+    <div class="hidden info" id={{user.login.uuid}}>
+      <p>Email <br> {{user.email}} </p>
+      <p>Phone <br> {{user.phone}} </p>
+      <p>Age <br> {{user.dob.age}} </p>
+      <p>Location <br> {{user.location.state}}, {{user.location.country}} </p>
+      <p>Registration Date <br> {{user.registered.date}} </p>
+    </div>
+  </div>
+</div>
