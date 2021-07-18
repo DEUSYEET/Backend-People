@@ -1,0 +1,64 @@
+{
+  "results": [{
+    "gender": "female",
+    "name": {
+      "title": "Mrs",
+      "first": "Maaike",
+      "last": "De Bode"
+    },
+    "location": {
+      "street": {
+        "number": 4389,
+        "name": "A.N. van Pellecomhof"
+      },
+      "city": "Doornenburg",
+      "state": "Noord-Holland",
+      "country": "Netherlands",
+      "postcode": 86977,
+      "coordinates": {
+        "latitude": "44.9248",
+        "longitude": "11.1615"
+      },
+      "timezone": {
+        "offset": "+5:45",
+        "description": "Kathmandu"
+      }
+    },
+    "email": "maaike.debode@example.com",
+    "login": {
+      "uuid": "925c702a-d3f6-4dab-96ee-219343bae722",
+      "username": "tinydog183",
+      "password": "theend",
+      "salt": "o0z1PSfy",
+      "md5": "e821daac1ba85d158f155a140b410bd2",
+      "sha1": "760e8e541baf4329460fbd1d0fdc51fdbfefcc0e",
+      "sha256": "03ac7d8939905ccef865f201b8264328f3cd89524ac8288b2a80ee80b293a3c9"
+    },
+    "dob": {
+      "date": "1975-03-03T20:20:00.932Z",
+      "age": 45
+    },
+    "registered": {
+      "date": "2005-07-27T11:12:07.573Z",
+      "age": 15
+    },
+    "phone": "(276)-941-1598",
+    "cell": "(505)-183-8995",
+    "id": {
+      "name": "BSN",
+      "value": "08430710"
+    },
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/29.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/29.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/29.jpg"
+    },
+    "nat": "NL"
+  }],
+  "info": {
+    "seed": "cdbe0c59c28bcb54",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+  }
+}
